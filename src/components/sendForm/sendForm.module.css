@@ -1,0 +1,266 @@
+.section__padding {
+    padding: 2em 8em;
+}
+
+.nav {
+    padding-top: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.nav button {
+    background-color: transparent;
+    border: none;
+    padding: 1em 0;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(90, 119, 197);
+    cursor: pointer;
+}
+
+.nav h1 {
+    margin: 0 42%;
+    color: #fff;
+}
+
+.container {
+    padding-top: 0;
+}
+
+/* Ballance */
+
+.ballance {
+    margin: 0 auto;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #fff;
+
+    background: linear-gradient(70deg, black, rgb(90, 119, 197));
+}
+
+.ballance p {
+    color: rgb(173, 173, 173);
+}
+
+.ballance span {
+    display: block;
+    padding: 20px 0 0 0;
+
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* Operator */
+
+.operator {
+    padding: 1em 8em;
+    display: flex;
+    align-items: center;
+    background-color: rgb(90, 119, 197);
+    ;
+    border-radius: 20px;
+    width: 50%;
+    margin: 1em auto 0em;
+}
+
+.operator img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1em;
+    border-radius: 5px;
+}
+
+.operator p {
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* Fields */
+
+.fields {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.fields p {
+    color: rgb(173, 173, 173);
+}
+
+.fields input {
+    background: transparent;
+
+    font-size: 20px;
+    color: #fff;
+
+    width: 100%;
+    height: 2.5em;
+    border-radius: 10px;
+    border: none;
+    padding: 0 10px;
+    margin-bottom: 5px;
+}
+
+.rub {
+    position: relative;
+}
+
+#ruble {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.error {
+    padding: 0;
+    color: rgb(198, 69, 69);
+    margin-top: -5px;
+    font-size: 10px;
+}
+
+/* hr */
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(131, 130, 130);
+}
+
+/* btn */
+.btn {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.btn button {
+    background-color: rgb(239, 213, 70);
+    width: 100%;
+    height: 2.5em;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+
+    transition: ease-in .2s;
+}
+
+.btn_disabled button {
+    background-color: rgb(109, 107, 107);
+    cursor: not-allowed;
+}
+
+/* Media queries */
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .nav h1 {
+        margin: 0 35%;
+        color: #fff;
+    }
+
+    .ballance {
+        margin: 0 auto;
+        width: 60%;
+        background-color: #fff;
+        border-radius: 20px;
+        color: #fff;
+
+        background: linear-gradient(70deg, black, rgb(90, 119, 197));
+    }
+
+    .operator {
+        padding: 1em 2em;
+        display: flex;
+        align-items: center;
+        background-color: rgb(90, 119, 197);
+        ;
+        border-radius: 20px;
+        width: 60%;
+        margin: 1em auto 0em;
+    }
+
+    .operator img {
+        width: 35px;
+        height: 35px;
+        margin-right: 1em;
+        border-radius: 5px;
+    }
+
+    .section__padding {
+        padding: 2em 2em;
+    }
+    .fields {
+        margin: 0 auto;
+        width: 70%;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        padding: 1em 0;
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .nav h1 {
+        margin: 0 25%;
+        color: #fff;
+    }
+
+    .ballance {
+        margin: 0 auto;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 20px;
+        color: #fff;
+
+        background: linear-gradient(70deg, black, rgb(90, 119, 197));
+    }
+
+    .operator {
+        padding: 1em 1em;
+        display: flex;
+        align-items: center;
+        background-color: rgb(90, 119, 197);
+        
+        border-radius: 20px;
+        width: 100%;
+        margin: 1em auto 0em;
+    }
+
+    .section__padding {
+        padding: 2em 2em;
+    }
+    .fields {
+        margin: 0 ;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        padding: 1em 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
