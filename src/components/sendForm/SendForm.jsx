@@ -28,6 +28,7 @@ const SendForm = ({ setIsError, setMessage, ballance, setBallance, getMoney, ope
 
         if (!inputDepValue) {
             setDeposit('')
+            setDepositError('Поле обязательно для заполнения')
             return
         }
 
@@ -36,18 +37,10 @@ const SendForm = ({ setIsError, setMessage, ballance, setBallance, getMoney, ope
         if (!isNaN(numericValue) && numericValue >= 1 && numericValue <= 1000) {
             setDeposit(inputDepValue);
         } else {
-            setDeposit(''); 
+            setDeposit('');
         }
 
-        if (e.target.value > ballance) {
-            setDepositError('Недостаточно средств!')
-        }
-        else if (!e.target.value) {
-            setDepositError('Поле обязательно для заполнения')
-        }
-        else {
-            setDepositError('')
-        }
+        e.target.value > ballance ? setDepositError('Недостаточно средств!') : setDepositError('')
     }
 
     // Add mask phone
@@ -61,6 +54,7 @@ const SendForm = ({ setIsError, setMessage, ballance, setBallance, getMoney, ope
 
         if (!inputNumbersValue) {
             setPhone('')
+            setPhoneError('Поле обязательно для заполнения')
             return
         }
 
@@ -86,9 +80,6 @@ const SendForm = ({ setIsError, setMessage, ballance, setBallance, getMoney, ope
         let regV = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,15}(\s*)?$/;
         if (!regV.test(e.target.value)) {
             setPhoneError('Некорректный номер')
-            if (!e.target.value) {
-                setPhoneError('Поле обязательно для заполнения')
-            }
         }
         else {
             setPhoneError('')
@@ -97,6 +88,7 @@ const SendForm = ({ setIsError, setMessage, ballance, setBallance, getMoney, ope
 
     }
 
+    // Blur
     const blurHandler = (e) => {
         switch (e.target.name) {
             case 'phone':
