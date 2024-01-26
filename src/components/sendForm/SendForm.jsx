@@ -172,7 +172,7 @@ const SendForm = ({ setIsError, setMessage, ballance, setBallance, getMoney, ope
                     <hr />
                 </div>
                 <div className={(deposit > ballance || deposit < 1) || phone.length < 18 ? `${s.btn} ${s.section__padding} ${s.btn_disabled}` : `${s.btn} ${s.section__padding}`}>
-                    <Link to={'/success'} style={{ textDecoration: 'none', color: '#000', width: '100%' }}><button disabled={(deposit >= ballance || deposit < 1) || phone.length < 18} onClick={() => sendMoney(deposit)}>Оплатить</button></Link>
+                    <Link to={'/success'} style={{ textDecoration: 'none', color: '#000', width: '100%' }}><button disabled={(deposit > ballance || deposit < 1) || phone.length < 18} onClick={() => sendMoney(deposit)}>Оплатить</button></Link>
                 </div>
             </div>
         </div>
