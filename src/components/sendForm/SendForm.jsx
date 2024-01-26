@@ -78,12 +78,7 @@ const SendForm = ({ setIsError, setMessage, ballance, setBallance, getMoney, ope
         }
 
         let regV = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,15}(\s*)?$/;
-        if (!regV.test(e.target.value)) {
-            setPhoneError('Некорректный номер')
-        }
-        else {
-            setPhoneError('')
-        }
+        !regV.test(e.target.value) ? setPhoneError('Некорректный номер') : setPhoneError('')
         onPhoneInput(e)
 
     }
